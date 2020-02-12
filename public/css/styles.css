@@ -22,11 +22,16 @@ p {
   height: 50px;
   padding: 20px 50px;
   font-weight: bold;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-right: 20px; }
 
 .btn-dark {
   background-color: #393c40;
   color: #f2f2f2; }
+
+.btn-light {
+  background-color: white;
+  color: #393c40; }
 
 .modal {
   position: fixed;
@@ -35,13 +40,27 @@ p {
   bottom: 0;
   left: 0;
   background-color: rgba(242, 242, 242, 0.5);
-  display: none; }
+  display: none;
+  flex-direction: column;
+  color: white;
+  text-align: center; }
   .modal .alert-box {
     width: 600px;
     height: 350px;
     background-color: #393c40;
     margin: auto;
-    border-radius: 10px; }
+    border-radius: 10px;
+    padding: 20px 25px; }
+    .modal .alert-box h1 {
+      font-size: 150%; }
+    .modal .alert-box .modalText {
+      margin-bottom: 40px; }
+    .modal .alert-box .modalInput {
+      margin-bottom: 80px; }
+      .modal .alert-box .modalInput input {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px; }
 
 .nav {
   position: fixed;
@@ -57,7 +76,8 @@ p {
     align-items: center; }
     .nav .left-nav-holder .link-holder {
       height: 100%;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       .nav .left-nav-holder .link-holder a {
         margin-top: 31px;
         color: #f2f2f2;

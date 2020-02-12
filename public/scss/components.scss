@@ -4,11 +4,17 @@
   padding: 20px 50px;
   font-weight: bold;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .btn-dark {
   background-color: #393c40;
   color: $white-color;
+}
+
+.btn-light {
+  background-color: white;
+  color: #393c40;
 }
 
 .modal {
@@ -19,6 +25,9 @@
   left: 0;
   background-color: rgba($white-color, 0.5);
   display: none;
+  flex-direction: column; 
+  color: white;
+  text-align: center;
 
   .alert-box {
     width: 600px;
@@ -26,5 +35,20 @@
     background-color: $dark-color;
     margin: auto;
     border-radius: 10px;
+    padding: 20px 25px;
+    h1{
+      font-size: 150%;
+    }
+    .modalText{
+      margin-bottom: 40px;
+    }
+    .modalInput {
+      margin-bottom: 80px;
+      input{
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+      }
+    }
   }
 }

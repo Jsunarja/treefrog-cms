@@ -26,7 +26,7 @@ You need to plan your application you are creating and if you are going to inclu
 
 6. Create project then run:
 
-f<pre><code>irebase init</code></pre>
+<pre><code>firebase init</code></pre>
 
 7. Associate with your project:
 
