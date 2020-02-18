@@ -6,7 +6,7 @@ var TREEFROG_SERVICE = (function(){
     };
 
     var _getCreateNavButtons = function(){
-        let buttonString = `<span id="createMainNav" class="btn btn-dark">Create Main Nav</span><span id="createMainNav" class="btn btn-dark">Create Sub Nav</span>`
+        let buttonString = `<span id="createMainNav" class="btn btn-dark">Create Main Nav</span><span id="createSubNav" class="btn btn-dark">Create Sub Nav</span>`
 
         return buttonString;
     };

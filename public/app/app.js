@@ -23,6 +23,10 @@ function initButtons(){
         $(`.modalBtn`).html(TREEFROG_SERVICE.getCreateMainNavButtons());
     });
 
+    $(document).on('click', '#createSubNav', function(){
+        $('.modal').css('display', 'flex');
+    })
+
     $(document).on('click', '#cancel', function(){
         $(`.modal`).css('display', 'none');
     });
