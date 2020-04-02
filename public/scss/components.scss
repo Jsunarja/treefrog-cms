@@ -13,8 +13,8 @@
 }
 
 .btn-light {
-  background-color: white;
-  color: #393c40;
+  background-color: $white-color;
+  color: $dark-color;
 }
 
 .modal {
@@ -23,32 +23,58 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba($white-color, 0.5);
   display: none;
-  flex-direction: column; 
-  color: white;
-  text-align: center;
+
+  .clickBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($white-color, 0.8);
+
+    .closeX {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 50px;
+      cursor: pointer;
+      color: $dark-color;
+    }
+  }
 
   .alert-box {
+    position: relative;
+    padding: 20px;
+    color: $white-color;
     width: 600px;
     height: 350px;
     background-color: $dark-color;
     margin: auto;
     border-radius: 10px;
-    padding: 20px 25px;
-    h1{
-      font-size: 150%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+      height: 30px;
+      border-radius: 4px;
+      width: 30%;
+      font-size: 20px;
     }
-    .modalText{
-      margin-bottom: 40px;
+
+    input[type='text'] {
+      text-align: center;
     }
-    .modalInput {
-      margin-bottom: 80px;
-      input{
-        width: 200px;
-        height: 30px;
-        border-radius: 10px;
-      }
-    }
+  }
+
+  .required{
+    color: red;
+    display: none;
+  }
+
+  .duplicate{
+    color: red;
+    display: none;
   }
 }
