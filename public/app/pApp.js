@@ -1,3 +1,17 @@
+
+function addNavListener() {
+    $("nav a").click(function (e) {
+        var id = e.currentTarget.id;
+        var newNavName = $("#updateContent").val();
+        if (newNavName == '') {
+            PRACTICE_SERVICE.deleteContent(id, displayData);
+        } else {
+            PRACTICE_SERVICE.updateContent(id, newNavName, displayData);
+        }
+
+    });
+}
+
 function displayData(addData) {
     var container = '<nav>';
     addData.forEach(function (doc) {
@@ -8,6 +22,7 @@ function displayData(addData) {
     });
     container += '</nav>'
     $(".showData").html(container);
+    addNavListener();
 }
 
 function init() {

@@ -8,7 +8,31 @@ var PRACTICE_SERVICE = (function () {
             .then(function (querySnapshot) {
                 callback(querySnapshot)
             });
+    };
+
+    var _deleteContent = function (id, callback) {
+        _db
+            .collection('Pages')
+            .doc(id)
+            .delete()
+            .then(function () {
+                _getAllData(callback);
+            });
+        alert('deleted content');
     }
+
+    var _updateData = function (id, newContent, callback) {
+        var newObj = { navName: newContent };
+
+        _db
+            .collection('Pages')
+            .doc(id)
+            .update(newObj)
+            .then(function () {
+                _getAllData(callback);
+            });
+        alert('updated Content');
+    };
 
     var _addData = function (navName, callback) {
         //starting loading screen
@@ -66,6 +90,8 @@ var PRACTICE_SERVICE = (function () {
     return {
         initFirebase: _initFirebase,
         checkPages: _checkPages,
-        getAllData: _getAllData
+        getAllData: _getAllData,
+        updateContent: _updateData,
+        deleteContent: _deleteContent
     }
 })();
